@@ -47,7 +47,8 @@ deactivate
 
 ```python
 import subprocess
-subprocess.run("echo example", shell=True)
+command = input("Command: ")
+subprocess.run(command, shell=True)
 ```
 
 Команда:
@@ -56,7 +57,7 @@ subprocess.run("echo example", shell=True)
 python -m bandit -ll /tmp/bandit-example.py
 ```
 
-Bandit должен обратить внимание на использование `shell=True`. Это лишь учебный пример — не передавайте пользовательский ввод в shell. Исправленный локальный вариант:
+Bandit должен отметить опасное сочетание пользовательского ввода и `shell=True` (B602). **Не запускайте сам пример**: проверяйте только исходный файл через Bandit. Никогда не передавайте пользовательский ввод в shell. Исправленный локальный вариант:
 
 ```python
 import subprocess
