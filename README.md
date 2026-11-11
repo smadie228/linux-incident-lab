@@ -7,6 +7,7 @@
 ![Bash](https://img.shields.io/badge/Bash-read--only%20diagnostics-147d86?style=flat-square&logo=gnubash&logoColor=white)
 ![HTTP](https://img.shields.io/badge/HTTP-200%20%7C%20503%20%7C%20timeout-152a3b?style=flat-square)
 ![Status](https://img.shields.io/badge/status-learning%20lab-53677b?style=flat-square)
+[![DevSecOps security checks](https://github.com/smadie228/linux-incident-lab/actions/workflows/devsecops-security.yml/badge.svg)](https://github.com/smadie228/linux-incident-lab/actions/workflows/devsecops-security.yml)
 
 [← GitHub-профиль](https://github.com/smadie228) · [Service Checker](https://github.com/smadie228/service-checker)
 
@@ -64,12 +65,15 @@ bash -n diagnose.sh
 
 Конфигурация [GitHub Actions](.github/workflows/linux-lab-tests.yml) проверяет Python unit-тесты и синтаксис Bash из корня нового репозитория. Выполнение проверок на собственной Linux-машине следует подтвердить отдельно.
 
+**DevSecOps:** дополнительный [security workflow](.github/workflows/devsecops-security.yml) запускает те же тесты, Bandit (SAST) и pip-audit (SCA), использует токен только для чтения и закреплённые commit SHA внешних actions. [Пошаговый практикум с командами и ограничениями проверок](docs/DEVSECOPS_LAB.md).
+
 ## `05 / Документация`
 
 - [INC-DEMO-001 — HTTP 503](docs/INC-001.md)
 - [INC-DEMO-002 — таймаут](docs/INC-002.md)
 - [Жизненный цикл учебного инцидента в Jira](docs/JIRA_WORKFLOW.md)
 - [План изучения Active Directory](docs/ACTIVE_DIRECTORY.md)
+- [DevSecOps-практикум: SAST, SCA и GitHub Actions](docs/DEVSECOPS_LAB.md)
 
 ## `06 / Дальнейшая практика`
 
